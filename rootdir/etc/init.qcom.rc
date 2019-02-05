@@ -889,7 +889,7 @@ service ftmd /vendor/bin/ftmdaemon
     disabled
     oneshot
 
-service vendor.sensors /vendor/bin/sscrpcd
+service vendor.sensors /vendor/bin/sscrpcd sensorspd
     class core
     user system
     group system
