@@ -307,10 +307,6 @@
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IFingerprintNavigation</name>
-            <instance>default</instance>
-        </interface>
-        <interface>
             <name>IFingerprintRecalibration</name>
             <instance>default</instance>
         </interface>
