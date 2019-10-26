@@ -74,4 +74,6 @@ sed -i "s|libqsap_sdk.so|libqsapshim.so|g" "$MDMCUTBACK"
 sed -i 's/xml version="2.0"/xml version="1.0"/' "$COMMON_BLOB_ROOT"/product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml
 sed -i 's/xml version="2.0"/xml version="1.0"/' "$COMMON_BLOB_ROOT"/product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml
 
+patchelf --set-soname "sound_trigger.primary.sdm660.so" "$COMMON_BLOB_ROOT"/vendor/lib/hw/sound_trigger.primary.sdm660.so
+
 "$MY_DIR"/setup-makefiles.sh

@@ -343,6 +343,7 @@ vendor/firmware/a630_sqe.fw
 vendor/bin/ipacm-diag
 
 # Listen
+vendor/lib/hw/sound_trigger.primary.default.so:vendor/lib/hw/sound_trigger.primary.sdm660.so
 vendor/lib/libgcs-calwrapper.so
 vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
