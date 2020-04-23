@@ -1,4 +1,5 @@
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2020 Paranoid Android
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +18,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := libqsap_shim.c
 LOCAL_SHARED_LIBRARIES := libqsap_sdk liblog libcutils libutils
-LOCAL_C_INCLUDES := $(TOP)/system/qcom/softap/sdk
+LOCAL_C_INCLUDES := $(TOP)/vendor/qcom/opensource/softap/softap/sdk
 LOCAL_MODULE := libqsapshim
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
