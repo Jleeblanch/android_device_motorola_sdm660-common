@@ -35,7 +35,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 -include $(LOCAL_PATH)/properties.mk
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    AOSPASettingsMotorolaOverlay \
+    CarrierConfigMotorolaOverlay \
+    FrameworksMotorolaOverlay \
+    SettingsProviderMotorolaOverlay \
+    SystemUIMotorolaOverlay \
+    TelephonyMotorolaOverlay
 
 # Audio
 PRODUCT_PACKAGES += \
