@@ -50,3 +50,7 @@ allow vendor_toolbox {
     persist_time_file
     sensors_persist_file
 }:file { r_file_perms setattr };
+
+# Ignore files stored on persist by custom recovery
+dontaudit vendor_toolbox media_rw_data_file:dir search;
+dontaudit vendor_toolbox media_rw_data_file:file *;
