@@ -319,6 +319,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libjson
 
+# QTI common
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
+
 # Radio
 PRODUCT_PACKAGES += \
     librmnetctl \
