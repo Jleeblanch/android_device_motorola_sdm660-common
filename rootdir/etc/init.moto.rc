@@ -36,7 +36,6 @@ on init
     setprop ro.vendor.boot.hwrev ${ro.boot.hwrev}
     setprop ro.vendor.zygote ${ro.zygote}
     setprop ro.vendor.hw.fps true
-    setprop ro.product.manufacturer Motorola
 
 on property:ro.vendor.hw.dualsim=true
     setprop persist.radio.multisim.config dsds
