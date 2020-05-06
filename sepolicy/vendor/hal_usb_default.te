@@ -1,0 +1,2 @@
+allow hal_usb_default sysfs_healthd:dir search;
+allow hal_usb_default sysfs_healthd:file r_file_perms;
