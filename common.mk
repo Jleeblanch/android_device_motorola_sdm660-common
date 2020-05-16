@@ -286,6 +286,7 @@ PRODUCT_ODM_PROPERTIES += \
     ro.vendor.qti.va_odm.support=1
 
 TARGET_COMMON_QTI_COMPONENTS := \
+    bt \
     perf
 
 # OMX
