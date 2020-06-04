@@ -84,6 +84,10 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-service
 
+# Broadcastradio
+PRODUCT_PACKAGES += \
+    android.hardware.broadcastradio@1.0-impl
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
