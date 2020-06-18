@@ -86,6 +86,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.voice.path.for.pcm.voip=true \
     vendor.audio.offload.min.duration.secs=60
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.audio.qti.flac.decoder=true
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
