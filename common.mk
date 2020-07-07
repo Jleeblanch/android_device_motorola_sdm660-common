@@ -319,10 +319,6 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson
