@@ -104,6 +104,9 @@ ifeq ($(HOST_OS),linux)
     endif
 endif
 
+# Face unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # GPS
 TARGET_NO_RPC := true
 USE_DEVICE_SPECIFIC_GPS := true
