@@ -498,9 +498,9 @@ vendor/lib64/libqmi_encdec.so
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
-product/framework/qti-telephony-common.jar|96154b2576114dd566bbc99a2d9af612de8849df
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+system_ext/framework/qti-telephony-common.jar|98951c48563c5846a58c9a3c4c254f32d0741f36
 vendor/bin/ATFWD-daemon
 vendor/bin/ipacm-diag
 vendor/bin/netmgrd
