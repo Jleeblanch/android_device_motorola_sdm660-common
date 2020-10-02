@@ -496,7 +496,6 @@ vendor/lib64/libqmi_encdec.so
 product/etc/permissions/qcrilhook.xml
 product/etc/permissions/telephonyservice.xml
 product/framework/qcrilhook.jar
-product/framework/qti-telephony-common.jar|96154b2576114dd566bbc99a2d9af612de8849df
 product/framework/QtiTelephonyServicelibrary.jar
 -product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ATFWD-daemon
@@ -714,6 +713,9 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
+
+# RIL - from cmi V12.2.1.0.RJAMIXM
+system_ext/framework/qti-telephony-common.jar|4ed03c8da84cbab608a023e680b2e54352adb3f1
 
 # MOTO RIL
 vendor/lib64/libsensorndkbridge.so
