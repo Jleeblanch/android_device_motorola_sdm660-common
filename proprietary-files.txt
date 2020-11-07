@@ -715,7 +715,7 @@ vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so
 
 # RIL - from cmi V12.2.1.0.RJAMIXM
-system_ext/framework/qti-telephony-common.jar|4ed03c8da84cbab608a023e680b2e54352adb3f1
+system_ext/framework/qti-telephony-common.jar|7ad697e4d5f1738fa862e639aab9026fd18fe8e4
 
 # MOTO RIL
 vendor/lib64/libsensorndkbridge.so
