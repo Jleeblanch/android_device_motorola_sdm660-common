@@ -24,15 +24,15 @@ import android.util.Log;
 
 import java.lang.System;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorAction;
 import org.lineageos.settings.device.SensorHelper;
 
 public class StowSensor implements ScreenStateNotifier, SensorEventListener {
-    private static final String TAG = "LineageActions-StowSensor";
+    private static final String TAG = "MotoActions-StowSensor";
     private static final int IN_POCKET_MIN_TIME = 5000;
 
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
     private final Sensor mSensor;
@@ -41,9 +41,9 @@ public class StowSensor implements ScreenStateNotifier, SensorEventListener {
     private boolean mLastStowed;
     private long isStowedTime;
 
-    public StowSensor(LineageActionsSettings lineageActionsSettings, SensorHelper sensorHelper,
+    public StowSensor(MotoActionsSettings MotoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
@@ -61,8 +61,8 @@ public class StowSensor implements ScreenStateNotifier, SensorEventListener {
 
     @Override
     public void screenTurnedOff() {
-        if (!mLineageActionsSettings.isIrWakeupEnabled() &&
-            mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
+        if (!mMotoActionsSettings.isIrWakeupEnabled() &&
+            mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, this);
             mEnabled = true;

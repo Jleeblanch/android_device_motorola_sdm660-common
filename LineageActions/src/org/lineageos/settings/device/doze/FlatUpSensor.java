@@ -22,14 +22,14 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorAction;
 import org.lineageos.settings.device.SensorHelper;
 
 public class FlatUpSensor implements ScreenStateNotifier {
-    private static final String TAG = "LineageActions-FlatUpSensor";
+    private static final String TAG = "MotoActions-FlatUpSensor";
 
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
     private final Sensor mFlatUpSensor;
@@ -39,9 +39,9 @@ public class FlatUpSensor implements ScreenStateNotifier {
     private boolean mIsStowed;
     private boolean mLastFlatUp;
 
-    public FlatUpSensor(LineageActionsSettings LineageActionsSettings, SensorHelper sensorHelper,
+    public FlatUpSensor(MotoActionsSettings MotoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mLineageActionsSettings = LineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
@@ -61,7 +61,7 @@ public class FlatUpSensor implements ScreenStateNotifier {
 
     @Override
     public void screenTurnedOff() {
-        if (mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
+        if (mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mFlatUpSensor, mFlatUpListener);
             mSensorHelper.registerListener(mStowSensor, mStowListener);

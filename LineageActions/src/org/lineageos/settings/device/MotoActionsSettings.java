@@ -27,8 +27,8 @@ import org.lineageos.settings.device.actions.UpdatedStateNotifier;
 import org.lineageos.settings.device.actions.CameraActivationAction;
 import org.lineageos.settings.device.actions.TorchAction;
 
-public class LineageActionsSettings {
-    private static final String TAG = "LineageActions";
+public class MotoActionsSettings {
+    private static final String TAG = "MotoActions";
 
     private static final String GESTURE_CAMERA_ACTION_KEY = "gesture_camera_action";
     private static final String GESTURE_CHOP_CHOP_KEY = "gesture_chop_chop";
@@ -49,7 +49,7 @@ public class LineageActionsSettings {
     private boolean mFlipToMuteEnabled;
     private boolean mLiftToSilenceEnabled;
 
-    public LineageActionsSettings(Context context, UpdatedStateNotifier updatedStateNotifier) {
+    public MotoActionsSettings(Context context, UpdatedStateNotifier updatedStateNotifier) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         loadPreferences(sharedPrefs);
         sharedPrefs.registerOnSharedPreferenceChangeListener(mPrefListener);

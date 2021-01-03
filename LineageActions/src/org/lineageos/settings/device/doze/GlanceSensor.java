@@ -21,14 +21,14 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorAction;
 import org.lineageos.settings.device.SensorHelper;
 
 public class GlanceSensor implements ScreenStateNotifier {
-    private static final String TAG = "LineageActions-GlanceSensor";
+    private static final String TAG = "MotoActions-GlanceSensor";
 
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
     
@@ -37,9 +37,9 @@ public class GlanceSensor implements ScreenStateNotifier {
 
     private boolean mEnabled;
 
-    public GlanceSensor(LineageActionsSettings lineageActionsSettings, SensorHelper sensorHelper,
+    public GlanceSensor(MotoActionsSettings MotoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
@@ -59,7 +59,7 @@ public class GlanceSensor implements ScreenStateNotifier {
 
     @Override
     public void screenTurnedOff() {
-        if (mLineageActionsSettings.isPickUpEnabled() && !mEnabled) {
+        if (mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, mGlanceListener);
             mSensorHelper.registerListener(mSensor, mApproachGlanceListener);

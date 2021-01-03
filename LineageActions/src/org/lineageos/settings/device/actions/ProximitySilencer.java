@@ -26,31 +26,31 @@ import android.telecom.TelecomManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorHelper;
 
 import static android.telephony.TelephonyManager.*;
 
 public class ProximitySilencer extends PhoneStateListener implements SensorEventListener, UpdatedStateNotifier {
-    private static final String TAG = "LineageActions-ProximitySilencer";
+    private static final String TAG = "MotoActions-ProximitySilencer";
 
     private static final int SILENCE_DELAY_MS = 500;
 
     private final TelecomManager mTelecomManager;
     private final TelephonyManager mTelephonyManager;
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final Sensor mSensor;
     private boolean mIsRinging;
     private long mRingStartedMs;
     private boolean mCoveredRinging;
 
-    public ProximitySilencer(LineageActionsSettings lineageActionsSettings, Context context,
+    public ProximitySilencer(MotoActionsSettings MotoActionsSettings, Context context,
                 SensorHelper sensorHelper) {
         mTelecomManager = (TelecomManager) context.getSystemService(Context.TELECOM_SERVICE);
         mTelephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensor = sensorHelper.getProximitySensor();
         mCoveredRinging = false;
@@ -59,7 +59,7 @@ public class ProximitySilencer extends PhoneStateListener implements SensorEvent
 
     @Override
     public void updateState() {
-        if (mLineageActionsSettings.isIrSilencerEnabled()) {
+        if (mMotoActionsSettings.isIrSilencerEnabled()) {
             mTelephonyManager.listen(this, LISTEN_CALL_STATE);
         } else {
             mTelephonyManager.listen(this, 0);

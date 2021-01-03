@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <style name="LineageActions" parent="@android:style/Theme.DeviceDefault.Settings">
+    <style name="MotoActions" parent="@android:style/Theme.DeviceDefault.Settings">
         <item name="preferenceTheme">@style/SettingsPreference</item>
     </style>
 

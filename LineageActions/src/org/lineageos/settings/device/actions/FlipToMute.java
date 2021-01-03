@@ -27,14 +27,14 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorHelper;
 
 public class FlipToMute implements UpdatedStateNotifier {
-    private static final String TAG = "LineageActions-FlipToMute";
+    private static final String TAG = "MotoActions-FlipToMute";
 
     private final NotificationManager mNotificationManager;
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final Sensor mFlatDown;
     private final Sensor mStow;
@@ -46,9 +46,9 @@ public class FlipToMute implements UpdatedStateNotifier {
     private Context mContext;
     private Receiver mReceiver;
 
-    public FlipToMute(LineageActionsSettings lineageActionsSettings, Context context,
+    public FlipToMute(MotoActionsSettings MotoActionsSettings, Context context,
                 SensorHelper sensorHelper) {
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mContext = context;
         mSensorHelper = sensorHelper;
         mFlatDown = sensorHelper.getFlatDownSensor();
@@ -61,14 +61,14 @@ public class FlipToMute implements UpdatedStateNotifier {
 
     @Override
     public void updateState() {
-        if (mLineageActionsSettings.isFlipToMuteEnabled() && !mIsEnabled) {
+        if (mMotoActionsSettings.isFlipToMuteEnabled() && !mIsEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mFlatDown, mFlatDownListener);
             mSensorHelper.registerListener(mStow, mStowListener);
             mContext.registerReceiver(mReceiver,
                 new IntentFilter(NotificationManager.ACTION_INTERRUPTION_FILTER_CHANGED));
             mIsEnabled = true;
-        } else if (!mLineageActionsSettings.isFlipToMuteEnabled() && mIsEnabled) {
+        } else if (!mMotoActionsSettings.isFlipToMuteEnabled() && mIsEnabled) {
             Log.d(TAG, "Disabling");
             mSensorHelper.unregisterListener(mFlatDownListener);
             mSensorHelper.unregisterListener(mStowListener);

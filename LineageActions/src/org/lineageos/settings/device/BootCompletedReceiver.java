@@ -28,7 +28,7 @@ import android.util.Log;
 import org.lineageos.settings.device.ServiceWrapper.LocalBinder;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
-    static final String TAG = "LineageActions";
+    static final String TAG = "MotoActions";
     private ServiceWrapper mServiceWrapper;
 
     @Override

@@ -24,10 +24,10 @@ import android.os.IBinder;
 import android.util.Log;
 
 public class ServiceWrapper extends android.app.Service {
-    static final String TAG = "LineageActions-ServiceWrapper";
+    static final String TAG = "MotoActions-ServiceWrapper";
 
     private final IBinder mBinder = new LocalBinder();
-    private LineageActionsService mLineageActionsService;
+    private MotoActionsService mMotoActionsService;
 
     public interface ServiceCallback {
         void sendResults(int resultCode, Bundle b);
@@ -45,7 +45,7 @@ public class ServiceWrapper extends android.app.Service {
     public void onCreate() {
         Log.i(TAG, "onCreate");
         super.onCreate();
-        mLineageActionsService = new LineageActionsService(this);
+        mMotoActionsService = new MotoActionsService(this);
     }
 
     @Override

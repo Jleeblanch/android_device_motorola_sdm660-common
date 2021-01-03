@@ -22,14 +22,14 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorAction;
 import org.lineageos.settings.device.SensorHelper;
 
 public class ProximitySensor implements ScreenStateNotifier, SensorEventListener {
-    private static final String TAG = "LineageActions-ProximitySensor";
+    private static final String TAG = "MotoActions-ProximitySensor";
 
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final SensorAction mSensorAction;
     private final Sensor mSensor;
@@ -38,9 +38,9 @@ public class ProximitySensor implements ScreenStateNotifier, SensorEventListener
 
     private boolean mSawNear = false;
 
-    public ProximitySensor(LineageActionsSettings lineageActionsSettings, SensorHelper sensorHelper,
+    public ProximitySensor(MotoActionsSettings MotoActionsSettings, SensorHelper sensorHelper,
                 SensorAction action) {
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mSensorHelper = sensorHelper;
         mSensorAction = action;
 
@@ -58,7 +58,7 @@ public class ProximitySensor implements ScreenStateNotifier, SensorEventListener
 
     @Override
     public void screenTurnedOff() {
-        if (mLineageActionsSettings.isIrWakeupEnabled() && !mEnabled) {
+        if (mMotoActionsSettings.isIrWakeupEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
             mSensorHelper.registerListener(mSensor, this);
             mEnabled = true;

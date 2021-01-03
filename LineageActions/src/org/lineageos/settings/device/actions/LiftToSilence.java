@@ -26,13 +26,13 @@ import android.telecom.TelecomManager;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import org.lineageos.settings.device.LineageActionsSettings;
+import org.lineageos.settings.device.MotoActionsSettings;
 import org.lineageos.settings.device.SensorHelper;
 
 public class LiftToSilence extends PhoneStateListener implements SensorEventListener, UpdatedStateNotifier {
-    private static final String TAG = "LineageActions-LiftToSilence";
+    private static final String TAG = "MotoActions-LiftToSilence";
 
-    private final LineageActionsSettings mLineageActionsSettings;
+    private final MotoActionsSettings mMotoActionsSettings;
     private final SensorHelper mSensorHelper;
     private final Sensor mFlatUpSensor;
     private final Sensor mStowSensor;
@@ -44,9 +44,9 @@ public class LiftToSilence extends PhoneStateListener implements SensorEventList
     private boolean mIsStowed;
     private boolean mLastFlatUp;
 
-    public LiftToSilence(LineageActionsSettings lineageActionsSettings, Context context,
+    public LiftToSilence(MotoActionsSettings MotoActionsSettings, Context context,
                 SensorHelper sensorHelper) {
-        mLineageActionsSettings = lineageActionsSettings;
+        mMotoActionsSettings = MotoActionsSettings;
         mSensorHelper = sensorHelper;
         mFlatUpSensor = sensorHelper.getFlatUpSensor();
         mStowSensor = sensorHelper.getStowSensor();
@@ -56,7 +56,7 @@ public class LiftToSilence extends PhoneStateListener implements SensorEventList
 
     @Override
     public void updateState() {
-        if (mLineageActionsSettings.isLiftToSilenceEnabled()) {
+        if (mMotoActionsSettings.isLiftToSilenceEnabled()) {
             mTelephonyManager.listen(this, LISTEN_CALL_STATE);
         } else {
             mTelephonyManager.listen(this, 0);

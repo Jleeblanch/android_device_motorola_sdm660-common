@@ -24,7 +24,7 @@ import android.util.Log;
 import org.lineageos.settings.device.SensorAction;
 
 public class DozePulseAction implements SensorAction, ScreenStateNotifier {
-    private static final String TAG = "LineageActions";
+    private static final String TAG = "MotoActions";
 
     private static final int DELAY_BETWEEN_DOZES_IN_MS = 1500;
 

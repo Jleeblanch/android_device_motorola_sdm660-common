@@ -27,7 +27,7 @@ import android.util.Log;
 import org.lineageos.settings.device.SensorAction;
 
 public class TorchAction implements SensorAction {
-    private static final String TAG = "LineageActions";
+    private static final String TAG = "MotoActions";
 
     private static final int TURN_SCREEN_ON_WAKE_LOCK_MS = 500;
 
