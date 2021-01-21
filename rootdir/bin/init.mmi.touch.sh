@@ -491,6 +491,6 @@ for touch_product_string in $(ls $touch_class_path); do
 	touch_vendor=$(cat $touch_class_path/$touch_product_string/vendor)
 	touch_path=/sys$(cat $touch_class_path/$touch_product_string/path)
 	notice "Handling touch ID [$touch_product_string] permissions"
-	setup_permissions
+	#setup_permissions
 done
 return 0
