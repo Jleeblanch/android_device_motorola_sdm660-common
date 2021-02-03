@@ -13,10 +13,15 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
-
     <!-- Display ro.product.name above Device model -->
     <bool name="config_displayDeviceName">true</bool>
 
+    <!-- IDs for each color mode. The values must match the corresponding constants in
+         android.view.Display -->
+    <integer-array name="color_mode_ids">
+        <item>0</item>
+        <item>-1</item>
+        <item>-1</item>
+    </integer-array>
 </resources>
