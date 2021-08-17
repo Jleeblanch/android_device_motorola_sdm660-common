@@ -393,6 +393,9 @@ system/etc/permissions/com.motorola.moto.xml:vendor/etc/permissions/com.motorola
 product/etc/permissions/com.motorola.motodisplay.xml
 vendor/etc/permissions/com.motorola.camera2.xml|6d77e9310c6647cda3c35f64097a14a1bda798d3
 
+# Moto Hardware
+vendor/etc/vhw.xml
+
 # Offmode charging
 vendor/bin/charge_only_mode
 vendor/bin/hvdcp_opti
