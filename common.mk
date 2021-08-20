@@ -175,10 +175,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.mmi.ramdump.rc \
+    init.mmi.touch.sh \
     init.mmi.usb.rc \
     init.mmi.usb.sh \
     init.qcom.rc \
     init.moto.rc \
+    init.oem.hw.sh \
     init.power.rc \
     init.class_main.sh \
     init.qcom.early_boot.sh \

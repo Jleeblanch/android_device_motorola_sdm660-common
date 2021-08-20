@@ -48,8 +48,20 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.mmi.touch.sh",
+    src: "bin/init.mmi.touch.sh",
+    soc_specific: true,
+}
+
+sh_binary {
     name: "init.mmi.usb.sh",
     src: "bin/init.mmi.usb.sh",
+    soc_specific: true,
+}
+
+sh_binary {
+    name: "init.oem.hw.sh",
+    src: "bin/init.oem.hw.sh",
     soc_specific: true,
 }
 
