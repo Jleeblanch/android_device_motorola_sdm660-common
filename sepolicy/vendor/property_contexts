@@ -24,6 +24,7 @@ ro.vendor.boot.serialno    u:object_r:moto_boot_prop:s0
 ro.vendor.carrier          u:object_r:moto_boot_prop:s0
 ro.vendor.boot.cid         u:object_r:moto_boot_prop:s0
 ro.vendor.fsg-id           u:object_r:moto_boot_prop:s0
+ro.vendor.product.device   u:object_r:moto_boot_prop:s0
 ro.vendor.zygote           u:object_r:moto_boot_prop:s0
 vendor.boot_completed      u:object_r:moto_boot_prop:s0
 vendor.hw.touch.status     u:object_r:moto_boot_prop:s0
