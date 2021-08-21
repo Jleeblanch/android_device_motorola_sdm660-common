@@ -26,6 +26,7 @@ ro.vendor.boot.cid         u:object_r:moto_boot_prop:s0
 ro.vendor.fsg-id           u:object_r:moto_boot_prop:s0
 ro.vendor.zygote           u:object_r:moto_boot_prop:s0
 vendor.boot_completed      u:object_r:moto_boot_prop:s0
+vendor.hw.touch.status     u:object_r:moto_boot_prop:s0
 
 ro.vendor.fm.              u:object_r:vendor_fm_prop:s0
 
