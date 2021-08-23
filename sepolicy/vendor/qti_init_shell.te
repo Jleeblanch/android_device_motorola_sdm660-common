@@ -11,6 +11,10 @@ get_prop(qti_init_shell, vendor_radio_prop)
 set_prop(qti_init_shell, exported2_default_prop)
 set_prop(qti_init_shell, system_prop)
 
+# Moto vhw
+allow qti_init_shell proc_hwconf:dir r_dir_perms;
+allow qti_init_shell proc_hwconf:file rw_file_perms;
+
 # Silence qemu.hw.mainkeys denial that we don't need
 dontaudit qti_init_shell default_prop:property_service set;
 
